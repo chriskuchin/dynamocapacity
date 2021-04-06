@@ -451,7 +451,7 @@ func getMetrics(region, tableName string, metric metric, day time.Time) (metrics
 		},
 		Namespace: aws.String("AWS/DynamoDB"),
 		Dimensions: []*cloudwatch.Dimension{
-			&cloudwatch.Dimension{
+			{
 				Name:  aws.String("TableName"),
 				Value: aws.String(tableName),
 			},
